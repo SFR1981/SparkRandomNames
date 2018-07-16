@@ -39,14 +39,12 @@ public class NameController {
 
             HashMap<String, Object> model = new HashMap<>();
             int number = Integer.parseInt(req.params(":n"));
-            ArrayList<String> nameList = new ArrayList<>();
-            for (int i = 1; i <= number; i++) {
-                nameList.add(name.getRandomName());
-            }
-            String names = String.join(", " , nameList);
+            String names = name.getNumberOfNames(number);
             model.put("result", names);
             return new ModelAndView(model, "result.vtl");
         }, velocityTemplateEngine);
+
+
 
 
     }
