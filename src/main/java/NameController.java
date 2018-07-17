@@ -36,10 +36,10 @@ public class NameController {
         }, velocityTemplateEngine);
 
             get("/:n", (req, res) -> {
-
+                Name people = new Name();
             HashMap<String, Object> model = new HashMap<>();
             int number = Integer.parseInt(req.params(":n"));
-            String names = name.getNumberOfNames(number);
+            String names = people.getNumberOfNames(number);
             model.put("result", names);
             return new ModelAndView(model, "result.vtl");
         }, velocityTemplateEngine);

@@ -25,4 +25,10 @@ public class NameTest {
         assertNotNull(names);
 
     }
+
+    @Test
+    public void getNineNames(){
+        String names = thing.getNumberOfNames(9);
+        assertEquals("", names);
+    }
 }

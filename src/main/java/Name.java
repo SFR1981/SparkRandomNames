@@ -22,6 +22,11 @@ public class Name {
         nameList.add("Geoff");
         nameList.add("Ian");
         nameList.add("Iain");
+        nameList.add("Harry");
+        nameList.add("Barry");
+        nameList.add("Larry");
+        nameList.add("Sally");
+        nameList.add("Jane");
 
     }
 
@@ -38,15 +43,15 @@ public class Name {
      }
 
      public String getNumberOfNames(int i){
-        Collections.shuffle(nameList);
+        Collections.shuffle(this.nameList);
         ArrayList<String> names = new ArrayList<>();
-        if (i > nameList.size()){
-            return String.join(", ", nameList);
+        if (i > this.nameList.size()){
+            return String.join(", ", this.nameList);
         }
         else{
-            for (int n=1; n <= i; n++){
-                names.add(nameList.get(n));
-                nameList.remove(n);
+            for (int n=0; n < i; n++){
+                names.add(nameList.get(0));
+                nameList.remove(0);
             }
             return String.join(", ", names);
         }
